@@ -1,0 +1,26 @@
+/* Reset de base */
+*, *::before, *::after { box-sizing: border-box; }
+html { font-family: system-ui, sans-serif; line-height: 1.5; }
+body { margin: 0; padding: 0; background: #fafafa; color: #333; }
+header { background: #2c3e50; color: #fff; padding: 1rem; text-align: center; }
+nav { display: flex; justify-content: center; gap: .5rem; flex-wrap: wrap; margin-top: .5rem; }
+nav button { background: #34495e; color: #fff; border: none; padding: .5rem 1rem; border-radius: 4px; cursor: pointer; }
+nav button[aria-current="page"] { background: #1abc9c; }
+main { max-width: 600px; margin: 0 auto; padding: 1rem; }
+section.view { display: none; }
+section.view.active { display: block; }
+#book-list, #plan-list { list-style: none; padding: 0; }
+#book-list li, #plan-list li { margin: .5rem 0; }
+#book-list button, #plan-list button { width: 100%; text-align: left; background: #ecf0f1; border: 1px solid #ddd; padding: .5rem; border-radius: 4px; cursor: pointer; }
+#book-list button:hover, #plan-list button:hover { background: #dfe6e9; }
+#verse-text .verse { padding: .5rem; margin: .25rem 0; border-left: 3px solid transparent; cursor: pointer; }
+#verse-text .verse:hover { background: #f0f0f0; }
+#verse-text .verse.highlight { border-left-color: #e74c3c; background: #fdeaea; }
+#note-input { width: 100%; min-height: 4rem; margin: .5rem 0; padding: .5rem; }
+#audio-player { position: sticky; bottom: 0; background: #fff; padding: 1rem; border-top: 1px solid #ddd; display: flex; align-items: center; gap: .5rem; }
+#audio-player[aria-hidden="true"] { display: none; }
+#audio-player[aria-hidden="false"] { display: flex; }
+button#save-note { background: #27ae60; color: #fff; border: none; padding: .5rem 1rem; border-radius: 4px; cursor: pointer; }
+button#back-to-books { background: #7f8c8d; color: #fff; border: none; padding: .5rem 1rem; border-radius: 4px; cursor: pointer; margin-top: .5rem; }
+.note-item { border: 1px solid #ddd; padding: .5rem; margin: .5rem 0; border-radius: 4px; background: #fefefe; }
+.tlm{padding:24px 16px;text-align:center;font:14px/1.6 system-ui,sans-serif;opacity:.85}
