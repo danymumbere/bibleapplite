@@ -1,0 +1,67 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>BibleAppLite – Bible française, audio, notes et méditation</title><meta name="description" content="La Bible française, audio chapitre par chapitre, notes privées et plans de lecture, tout en cache pour une utilisation sans connexion. Partagez la parole."><meta name="keywords" content="Bible française, audio, offline, notes, méditation, PWA, partage, WhatsApp, Discord, lecture, plan, service worker, cache"><link rel="canonical" href="https://danymumbere.github.io/bibleapplite/"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#0a7d6c"><meta property="og:type" content="website"><meta property="og:site_name" content="The Lamp's Mark"><meta property="og:title" content="BibleAppLite – Bible française, audio, notes et méditation"><meta property="og:description" content="La Bible française, audio chapitre par chapitre, notes privées et plans de lecture, tout en cache pour une utilisation sans connexion. Partagez la parole."><meta property="og:url" content="https://danymumbere.github.io/bibleapplite/"><meta property="og:image" content="https://danymumbere.github.io/bibleapplite/og.svg"><meta property="og:image:alt" content="BibleAppLite – Bible française, audio, notes et méditation"><meta property="og:locale" content="fr_FR"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="BibleAppLite – Bible française, audio, notes et méditation"><meta name="twitter:description" content="La Bible française, audio chapitre par chapitre, notes privées et plans de lecture, tout en cache pour une utilisation sans connexion. Partagez la parole."><meta name="twitter:image" content="https://danymumbere.github.io/bibleapplite/og.svg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"BibleAppLite – Bible française, audio, notes et méditation","description":"La Bible française, audio chapitre par chapitre, notes privées et plans de lecture, tout en cache pour une utilisation sans connexion. Partagez la parole.","url":"https://danymumbere.github.io/bibleapplite/","applicationCategory":"LifestyleApplication","inLanguage":"fr","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"creator":{"@type":"Organization","name":"The Lamp's Mark","url":"https://thelampsmark.pages.dev/"}}</script><link rel="stylesheet" href="style.css"></head><body><body>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BibleAppLite</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+
+  <header>
+    <h1>BibleAppLite</h1>
+    <nav aria-label="Navigation principale">
+      <button id="nav-home" aria-current="page">Accueil</button>
+      <button id="nav-books">Livres</button>
+      <button id="nav-plans">Plans</button>
+      <button id="nav-notes">Notes</button>
+      <button id="nav-share">Partager</button>
+    </nav>
+  </header>
+
+  <main id="app">
+    <!-- Accueil -->
+    <section id="home" class="view">
+      <h2>Bienvenue</h2>
+      <p>Choisissez un livre pour commencer votre lecture.</p>
+    </section>
+
+    <!-- Liste des livres -->
+    <section id="books" class="view" aria-hidden="true">
+      <h2>Livres de la Bible</h2>
+      <ul id="book-list"></ul>
+    </section>
+
+    <!-- Plans de lecture -->
+    <section id="plans" class="view" aria-hidden="true">
+      <h2>Plans de lecture</h2>
+      <ul id="plan-list"></ul>
+    </section>
+
+    <!-- Notes et méditations -->
+    <section id="notes" class="view" aria-hidden="true">
+      <h2>Mes notes et méditations</h2>
+      <div id="notes-container"></div>
+    </section>
+
+    <!-- Partage -->
+    <section id="share" class="view" aria-hidden="true">
+      <h2>Partager la parole</h2>
+      <p>Choisissez un verset ou un chapitre à partager :</p>
+      <button id="share-whatsapp">Partager sur WhatsApp</button>
+      <button id="share-discord">Partager sur Discord</button>
+    </section>
+
+    <!-- Lecteur audio (affichée uniquement lorsque nécessaire) -->
+    <div id="audio-player" aria-hidden="true">
+      <audio controls></audio>
+      <p id="audio-status">Chargement...</p>
+    </div>
+
+    <!-- Vue détail verset -->
+    <section id="verse-view" class="view" aria-hidden="true">
+      <h2 id="verse-title"></h2>
+      <div id="verse-text"></div>
+      <textarea id="note-input" placeholder="Écrivez votre note..."></textarea>
+      <button id="save-note">Sauvegarder la note</button>
+      <button id="back-to-books">Retour</button>
+    </section>
+  </main>
+</body><footer class="tlm"><p>Créé par <a href="https://thelampsmark.pages.dev/" target="_blank" rel="noopener">The Lamp's Mark</a></p><p>Cette application est gratuite. Pour la soutenir : mobile money Africell <strong>0906253050</strong></p><p><a href="https://wa.me/?text=BibleAppLite%20%E2%80%93%20Bible%20fran%C3%A7aise%2C%20audio%2C%20notes%20et%20m%C3%A9ditation%20https%3A%2F%2Fdanymumbere.github.io%2Fbibleapplite%2F" target="_blank" rel="noopener">Partager sur WhatsApp</a> · <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdanymumbere.github.io%2Fbibleapplite%2F" target="_blank" rel="noopener">Facebook</a> · <button type="button" id="tlm-share">Partager</button></p></footer><script src="app.js"></script><script>document.getElementById('tlm-share').onclick=()=>navigator.share?navigator.share({title:document.title,url:location.href}):navigator.clipboard.writeText(location.href).then(()=>alert('Lien copié'))</script></body></html>
